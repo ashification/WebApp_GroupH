@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!--Indicates the document is a HTML-->
+<html>
+    <head> <!--The header of the file--->
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+        <!--Name of the webpage--->
+        <title>
+            ARSH Sports 
+        </title>
+        <!---This sets the page logo on the top as the websites logo--->
+        <link rel="icon" type="image/x-icon" href="images/logo2.JPG">
+        <!--Stylesheet for the index page--->
+        <link rel = "stylesheet" href="Stylesheets/style.css"> 
+        <!---Fonts obtained from google fonts---> 
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
+        <!---The stylesheet for the special fonts used in the page---> 
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+        <!---JavaScript file used for the menu bar--->
+        <script src="JavaScript/app.js" defer></script>
+    </head>
+
+    <body>
+
+        <!------Top header of the page with logo and index------->
+        <!---This section was used to display the different options of the website and clicking on to these options would take the user to the respective page--->
+        <section class="logo"> <!---Styles class for logo--->
+            <a href = "index.html"><img src ="Images/cw.jpg"></a> <!---Clicking on the logo brings the user back to the index page--->
+            <!---Dynamic Navigation Bar--->
+            <a href="#" class="icon">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </a>
+            <div class = "nav-links"> <!---Styles class for nav bar--->
+                <ul>
+                    <li><a href = "index.html">HOME</a></li>
+                    <li><a href = "aboutus.html">ABOUT US</a></li>
+                    <li><a href = "articles.html">SHOP</a></li>
+                    <li><a href = "returns.html">RETURNS</a></li>
+                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                </ul>
+            </div>
+        </section>
+
+        <!-----Background image with introduction page------>
+        <!---This section was used to show the user what page they are on with an image and some comments on the page--->
+        <!---This section has a button which takes the user to the youtube page. It also has a hovering transition effect--->
+        <section class = 'header'>
+            <div class = "introduction">
+                <h1>COMPUTER WORLD</h1>
+                <p>Are you a die hard sports fan? Does your team loosing keep you up at night? If so, then this is the place 
+                    for you. <br>ARSH Sports brings you the latest on everything related to sports with articles on your favourite 
+                    teams and videos on various sports topics from around the world.
+                </p>
+                <a href="https://www.youtube.com/channel/UCY4m9qkHN-BZzOZN-K7IKFA/featured" class = "ytlink">Visit Our Youtube Page</a>
+            </div>
+        </section>
+
+        <!-----Options------>
+        <!---This section shows the user all the different panels or sections availble for the user to browse--->
+        <!---The options are set up so that they have hovering effects and when clicked the user is taken to the respective webpage--->
+        <section class="Options-Panel">
+            <h2>What We Offer</h2>
+            <div class = "row">
+                <div class = "column" onclick="location.href = 'articles.html'">
+                    <h3>PC</h3>
+                    <p>Some people fancy reading articles than watching a video and this section is designed just for them. 
+                        <br>These contain the latest rumours revolving certain sports or sports events along with transcripts from player interviews. 
+                    </p>
+                </div>
+                <div class = "column" onclick="location.href = 'videos.html'">
+                    <h3>Peripherals</h3>
+                    <p>Videos which document specific moments or teams in the hostory of sports along with debate segments on
+                        "hot topics".<br> These videos also contain statistical explanation of certain players.
+                    </p>
+                </div>
+                <div class = "column" onclick="location.href = 'podcasts.html'">
+                    <h3>Games Catalogue</h3>
+                    <p>Podcasts brought to you by your favourite athletes and sports journalists.<br> Also contain interviews with
+                        coaches and athelets on their philosophy and approach to the game.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!------Reviews----->
+        <!---This section contains 2 review boxes which aso use the fontawsome symbols of stars along with resizing of image using styles--->
+        <section class="reviews">
+            <h1>Reviews From Users</h1>
+            <div class="row">
+                <div class="reviews-col">
+                    <img src="images/shams.jpg">
+                    <div>
+                        <p>The website offers an easy gateway to multiple articles from different online sources 
+                            making this the ideal sports website. 
+                        </p>
+                        <h3>Shams Charania</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                <div class="reviews-col">
+                    <img src="images/fabri.jpg">
+                    <div>
+                        <p>This website offers the latest on all the transfer news in the world of football and has been one of the 
+                            most used websites by me over the last year.
+                        </p>
+                        <h3>Fabrizio Romano</h3>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-----Footer------>
+        <!---This is the footer section and it has fontawsome symbols for the popular social media apps--->
+        <!---Using styles it was given a grey background color--->
+        <section class = "footer">
+            <h4>Available on all social media platforms</h4>
+            <div class="icons">
+                <i class = "fab fa-facebook"></i>
+                <i class = "fab fa-instagram"></i>
+                <i class = "fab fa-twitter"></i>
+                <i class = "fab fa-youtube"></i>
+            </div>
+        </section>
+    </body>
+</html>

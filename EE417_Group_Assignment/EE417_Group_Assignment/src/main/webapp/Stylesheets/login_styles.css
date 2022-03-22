@@ -1,0 +1,28 @@
+/*This sets the background image for the login/register page*/
+.header_login{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(../Images/login.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*This is for the form in the login/register page*/
+.form{
+    top: 0%;
+    padding-top: 0px;
+}
+/*This sets the dimensions of the boxes on the form*/
+.form input, .form textarea{ 
+    width: 50%;
+    padding: 15px;
+    padding-top: 20px;
+    margin-bottom: 17px;
+    outline: white;
+    border: 1px solid #ccc;
+}
+/*This was to set the register button to red on the login page*/
+.reg-button{
+    color: red;
+}
