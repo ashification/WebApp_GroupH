@@ -1,0 +1,273 @@
+/* This set of styles applies for the entire webpage and sets the font*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif
+}
+
+/*Header of the files*/
+
+/*This style adds the background image after the header of the page containing the image
+  that is linked here. The background image is centered and shaded to make it a bit darker*/
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4, 9, 30, 0.7)), url(../Images/computer.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*This style is for the nav bar which aligns the items in the center of the bar with padding for 
+the gap*/
+.nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+/*this adjusts the image on the navbar to be 100px*/
+.nav img{
+    width: 100px;
+}
+/*This aligns the segments under this class to the right which is the index on the navbar*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+    display: none;
+}
+/* The contents are displayed */
+.nav-links.active{
+    display:contents;
+}
+/*this class is for the list items which are adjusted on the nav bar*/
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+/*The color of the links on the list are set to white and the font is adjusted*/
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 13;
+}
+/*this style is for the effect on the list items when the cursor is hovered over it*/
+/*the color is set to red and transition time is 0.5s*/
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+/*this takes the width of the transition to 100%*/
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/*This is the style for the entire header of all the pages*/
+/*The color is set to black with height at 80px*/
+.logo{
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.911);
+    display: flex;
+    padding: 2% 6%;
+    font-size: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+/*This style is for the image on the logo*/
+.logo img{
+    height: 75px;
+    padding-top: 1%;
+    padding-left:9%;
+    align-items: center;
+}
+
+/*-----Background image with introduction page--- */
+
+/*This set of css is for the items on the background page after the header section*/
+/*The text is centered with the font set to white and padding*/
+.introduction{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/*h1 font set to 62px*/
+.introduction h1{
+    font-size: 62px;
+}
+/*p font set to 20px in white and with padding*/
+.introduction p{
+    margin: 10px 0 40px;
+    font-size: 20px;
+    color: white;
+}
+/*The css for the link on the page*/
+/*Set to white in a box and transparent*/
+.ytlink{
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    padding: 12px 34px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/*This is the hovering effect of the link which is set to red with 1s as transition time*/
+.ytlink:hover{
+    border: 1px solid red;
+    background: red;
+    transition: 1s;
+}
+
+/* -------Options------ */
+
+/*This is the css for the options header with padding and width. It is set at the center*/
+.Options-Panel{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+/*This is css for h2. it is resized and font weight is set*/
+h2{
+    font-size: 36px;
+    font-weight: 600;
+}
+/*This is the css for all paragraphs*/
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+/*This is the css for the row*/
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+/*This is the css for the column which allows the objects to be in columns side by side*/
+.column{
+    flex-basis: 30%;
+    background: lightblue;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: default;
+}
+/*This is the css for all h3*/
+h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0px;
+}
+/*This is the hovering effect on the column sections. It is given a black shadow hover effect*/
+.column:hover{
+    box-shadow: 0 0 20px 0px black;
+}
+
+/* ------Reviews----- */
+
+/*This is the css for the reviews section. The header for this is the same as the options header*/
+.reviews{
+    width: 80%;
+    margin: auto;
+    padding-top: 0px;
+    text-align: center;
+}
+/*This is similar to the previous col css but with different attributes*/
+.reviews-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding-top: 25px;
+    cursor: default;
+    display: flex;
+}
+/*This is for the image places on the section. It is resized*/
+.reviews-col img{
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+/*css for the paragraph in reviews*/
+.reviews-col p{
+    padding: 0px;
+}
+/*css for the h3 in reviews. Text is aligned to the left*/
+.reviews-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+/*This is the hovering effect. A black shadow is given as the effect*/
+.reviews-col:hover{
+    box-shadow: 0 0 20px 0px black;
+}
+
+/*-----Footer------*/
+
+/*This sets the padding of the footer and the background color to darkgrey*/
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    background-color: darkgrey;
+}
+/*This is for h4 in the footer for margin padding and font weight*/
+.footer h4{
+    margin-bottom: 15px;
+    margin-top: 0px;
+    font-weight: 600;
+}
+
+/*---Dynamic Nav bar----*/
+.icon{
+    position: absolute;
+    top: 50px;
+    right: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+/*Style for bar*/
+.icon .bar{
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/*Middle bar is removed/transparent*/
+.icon.active .bar:nth-child(2)
+{
+    opacity: 0;
+}
+/*top bar is crossed and changed colour*/
+.icon.active .bar:nth-child(1)
+{
+    transform:translateY(8.75px) rotate(45deg);
+    background-color: #f44336;
+}
+/*bottom bar is crossed and changed colour*/
+.icon.active .bar:nth-child(3)
+{
+    transform:translateY(-8.75px) rotate(-45deg);
+    background-color: #f44336;
+}

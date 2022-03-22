@@ -1,0 +1,85 @@
+/*This sets the background image for the login/register page*/
+.header_login{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.5), rgba(4, 9, 30, 0.5)), url(../Images/login.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+/*This is for the form in the login/register page*/
+.form{
+    top: 0%;
+    padding-top: 0px;
+}
+/*This sets the dimensions of the boxes on the form*/
+.form input, .form textarea{ 
+    width: 50%;
+    padding: 15px;
+    padding-top: 5px;
+    margin-bottom: 10px;
+    outline: white;
+    border: 1px solid #ccc;
+}
+/* .form i{
+    position: absolute;
+    top: 40px;
+    right: 10px;
+} */
+/*This was to set the register button to red on the login page*/
+.reg-button{
+    color: red;
+}
+
+/*The text is centered with the font set to white and padding*/
+.introduction2{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 49%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+/*h1 font set to 62px*/
+.introduction2 h1{
+    font-size: 45px;
+}
+/*-----*/
+.options{
+    size-adjust: 100px;
+}
+/*---Storage Styles---*/
+.submissions{
+    background-color: lightsteelblue;
+    text-align: center;
+}
+/*The css for the link on the page*/
+/*Set to white in a box and transparent*/
+.ytlink3{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 34px;
+    bottom: 2px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+/*This is the hovering effect of the link which is set to red with 1s as transition time*/
+.ytlink3:hover{
+    border: 1px solid red;
+    background: red;
+    transition: 0s;
+}
+/*-----*/
+.content{
+    padding: 12px 400px;
+    background-position:center;
+    display: none;
+}
+.content.active{
+    display: flex;
+}

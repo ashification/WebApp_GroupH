@@ -1,0 +1,15 @@
+.dom{
+    background-color: lightsteelblue;
+    text-align: center;
+}
+
+.dom2{
+    background-color: lightsteelblue;
+    text-align: center;
+    padding-bottom: 10px;
+    position: relative;
+    display:flex;
+}
+.dom2.active{
+    display: flex;
+}
