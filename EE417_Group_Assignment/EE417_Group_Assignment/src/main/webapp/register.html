@@ -38,7 +38,7 @@
                 <ul>
                     <li><a href = "index.html">HOME</a></li>
                     <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "articles.html">SHOP</a></li>
+                    <li><a href = "shop.html">SHOP</a></li>
                     <li><a href = "returns.html">RETURNS</a></li>
                     <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
                 </ul>
@@ -52,7 +52,7 @@
             <div class = "introduction2">
                 <h1>REGISTER</h1>
                 <div class="form">
-                    <form name = "registration" onSubmit="return formValidation();" >
+                    <form name = "registration" onSubmit="formValidation();" >
                         <input type="text" id = "userName" name = "userName" placeholder="Enter Your User Name" required>
                         <!-- <i class="fas fa-check-circle"></i>
                         <i class="fas fa-exclamation-circle"></i>
@@ -100,34 +100,11 @@
                         </li>
                         <br/>
                         <button type="submit" class="ytlink">Register</button>
-                        <button type="button" class="ytlink" onclick="addRow()">Add Submission</button>
                     </form>
                 </div>
             </div>
         </section>
 
-        <section>
-            <div class="submissions">
-                    <h1>Submissions</h1>
-                    <br>
-                    <!-- Button to view table -->
-                    <button type="submit" class="ytlink3" onclick="tableOfContents()">Click to View Submissions</button>
-                    <div id="content" class="content">
-                        <!-- table added with border stregnth and cell padding -->
-                        <table id="myTableData" className="myTableData" border="10" cellpadding="8">
-                            <tr>
-                                <!-- different values in the table -->
-                                <td><b>Delete</b></td>
-                                <td><b>Username</b></td>
-                                <td><b>Password</b></td>
-                                <td><b>Email</b></td>
-                                <td><b>Mobile</b></td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </section>
         <!-----Footer------>
         <!---This is the footer section and it has fontawsome symbols for the popular social media apps--->
         <!---Using styles it was given a grey background color--->

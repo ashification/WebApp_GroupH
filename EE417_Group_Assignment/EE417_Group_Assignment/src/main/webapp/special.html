@@ -1,16 +1,19 @@
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
-<html>
-    <head> <!--The header of the file--->
+<html id="parents">
+    <head id="parent"> <!--The header of the file--->
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <!--Name of the webpage--->
-        <title>
+        <title id="title">
             ARSH Sports 
         </title>
         <!---This sets the page logo on the top as the websites logo--->
         <link rel="icon" type="image/x-icon" href="images/logo2.JPG">
-        <!--Stylesheet for the index page and the about us page--->
+        <!--Stylesheet for the index page and the articles page--->
         <link rel = "stylesheet" href="Stylesheets/style.css"> 
-        <link rel = "stylesheet" href="Stylesheets/aboutus_styles.css">
+        <link rel = "stylesheet" href="Stylesheets/articles_styles.css">
+        <link rel = "stylesheet" href="Stylesheets/dom_styles.css">
+        <link rel = "stylesheet" href="Stylesheets/register_styles.css">
+        <link rel = "stylesheet" href="Stylesheets/specials_styles.css">
         <!---Fonts obtained from google fonts---> 
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +22,8 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
         <!---JavaScript file used--->
         <script src="JavaScript/app.js" defer></script>
+        <script src="JavaScript/articles.js" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </head>
 
     <body>
@@ -46,17 +51,15 @@
 
         <!-----Background image with introduction page------>
         <!---This section was used to show the user what page they are on with an image and some comments on the page--->
-        <!---This section has a button which takes the user to the youtube page. It also has a hovering transition effect--->
-        <section class = 'header_aboutus'>
+        <!---This section has a button which takes the user to the home page of the Athletic which is a source used in the options. 
+            It also has a hovering transition effect--->
+        <section class = 'header_specials'>
             <div class = "introduction">
-                <h1>ABOUT US</h1>
-                <p> Computer World is a website that was created by a team of 8 people studying in DCU. The task of designing this 
-                    website was split into muini tasks and assigned to each member.<br>
-                    <br> Front end aspects of the project were handled by Arshad Hussain Asmath and Jieying Zhang. <br>
-                    <br> Back end development of the project was completed by Matthieu Crampon, Daniel Fagan and Haoran Zhou. <br>
-                    <br> The release of this project was handled by Theo Mazars and Asif Gafoor Syed. <br>
-                    <br> The entire project was supervised by the team leader, Aisling Lee.
+                <h1>Items on Sale</h1>
+                <p>Welcome to the Specials section. Here you will find all the items that have been listed for sale.
+                    <br> You need to be logged in to make a purchase
                 </p>
+                <a href="shop.html" class = "ytlink">Go back to the Shop</a>
             </div>
         </section>
 
