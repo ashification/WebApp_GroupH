@@ -2,7 +2,7 @@
 .header_articles{
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4, 9, 30, 0.7)), url(../Images/Articles.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4, 9, 30, 0.7)), url(../Images/shop.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -53,4 +53,20 @@
     border: 1px solid lightslategray;
     background: lightslategray;
     transition: 1s;
+}
+.column2{
+    flex-basis: 40%;
+    background: lightcoral;
+    border-radius: 5px;
+    margin-top: 0%;
+    margin-bottom: 1%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5s;
+    cursor: default;
+}
+
+/*This is the hovering effect on the column sections. It is given a black shadow hover effect*/
+.column2:hover{
+    box-shadow: 0 0 20px 0px black;
 }
