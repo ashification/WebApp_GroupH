@@ -71,6 +71,19 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
+            <center><div id="current_date"></p></center>
+            <script>
+            date = new Date();
+            year = date.getFullYear();
+            month = date.getMonth() + 1;
+            day = date.getDate();
+            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
+            </script>
+            <center><span id="datetime"></span></center>
+            <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
+            </script              
         </section>
 
     </body>
