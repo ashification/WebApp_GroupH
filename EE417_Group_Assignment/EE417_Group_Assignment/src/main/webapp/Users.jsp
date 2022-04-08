@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+        <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
 <html id="parents">
     <head id="parent"> <!--The header of the file--->
@@ -40,11 +46,13 @@
             </a>
             <div class = "nav-links"> <!---Styles class for nav bar--->
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "shop.html">SHOP</a></li>
-                    <li><a href = "returns.html">RETURNS</a></li>
-                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                    <li><a href = "IndexAdmin.jsp">HOME</a></li>
+                    <li><a href = "AboutusAdmin.jsp">ABOUT US</a></li>
+                    <li><a href = "ShopAdmin.jsp">SHOP</a></li>
+                    <li><a href = "ReturnsAdmin.jsp">RETURNS</a></li>
+                    <li><a href = "RestockAdmin.jsp">RESTOCK</a></li>
+                    <li><a href = "Users.jsp">USERS</a></li>
+                    <li><a href = "LogoutServlet">LOG OUT</a></li> <!---List of html webpages used with their links--->
                 </ul>
             </div>
         </section>
@@ -53,16 +61,51 @@
         <!---This section was used to show the user what page they are on with an image and some comments on the page--->
         <!---This section has a button which takes the user to the home page of the Athletic which is a source used in the options. 
             It also has a hovering transition effect--->
-        <section class = 'header_pc'>
+        
+        <section class = 'header_login'>
             <div class = "introduction">
-                <h1>PC Shop</h1>
-                <p>Welcome to the PC shop. Here we have all the new PC's available with the latest technologies
-                    <br> You need to be logged in to make a purchase
-                </p>
-                <a href="shop.html" class = "ytlink">Go back to the Shop</a>
+                <h1>Database Of All Users</h1>
+                <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
+         url = "jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/testdb"
+         user = "ee417"  password = "ee417"/>
+         
+        <!-- Query to obtain all the values from the accounts table -->
+      <sql:query dataSource = "${snapshot}" var = "result">
+      SELECT * FROM testdb.GroupH_Accounts      </sql:query>
+      
+      <!-- Creating the table in the JSP file and setting the headers -->
+      <table border = "1" width = "100%">
+         <tr>
+            <th>USERNAME</th>
+            <th>EMAIL</th>
+            <th>PASSWORDS</th>
+            <th>FIRSTNAME</th>
+            <th>LASTNAME</th>
+            <th>DOB</th>
+            <th>PHONE</th>
+            <th>COUNTRY</th>
+            <th>GENDER</th>
+            <th>ROLES</th>
+         </tr>
+         <!-- Adding the values from the table into the row of the JSP file in a foreach loop-->
+        <c:forEach var = "row" items = "${result.rows}">
+            <tr>
+               <td><c:out value = "${row.USERNAME}"/></td>
+               <td><c:out value = "${row.EMAIL}"/></td>
+               <td><c:out value = "${row.PASSWORDS}"/></td>
+               <td><c:out value = "${row.FIRSTNAME}"/></td>
+               <td><c:out value = "${row.LASTNAME}"/></td>
+               <td><c:out value = "${row.DOB}"/></td>
+               <td><c:out value = "${row.PHONE}"/></td>
+               <td><c:out value = "${row.COUNTRY}"/></td>
+               <td><c:out value = "${row.GENDER}"/></td>
+               <td><c:out value = "${row.ROLES}"/></td>
+            </tr>
+         </c:forEach>
+      </table>
             </div>
         </section>
-
+        
         <!-----Footer------>
         <!---This is the footer section and it has fontawsome symbols for the popular social media apps--->
         <!---Using styles it was given a grey background color--->
@@ -74,20 +117,6 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
-            <br>
-            <center><div id="current_date"></p></center>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
-            <center><span id="datetime"></span></center>
-            <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
         </section>
 
     </body>

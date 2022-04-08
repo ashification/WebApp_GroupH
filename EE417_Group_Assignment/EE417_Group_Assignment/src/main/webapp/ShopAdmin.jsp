@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
 <html id="parents">
     <head id="parent"> <!--The header of the file--->
@@ -39,11 +41,13 @@
             </a>
             <div class = "nav-links"> <!---Styles class for nav bar--->
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "shop.html">SHOP</a></li>
-                    <li><a href = "returns.html">RETURNS</a></li>
-                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                    <li><a href = "IndexAdmin.jsp">HOME</a></li>
+                    <li><a href = "AboutusAdmin.jsp">ABOUT US</a></li>
+                    <li><a href = "ShopAdmin.jsp">SHOP</a></li>
+                    <li><a href = "ReturnsAdmin.jsp">RETURNS</a></li>
+                    <li><a href = "RestockAdmin.jsp">RESTOCK</a></li>
+                    <li><a href = "Users.jsp">USERS</a></li>
+                    <li><a href = "LogoutServlet">LOG OUT</a></li> <!---List of html webpages used with their links--->
                 </ul>
             </div>
         </section>
@@ -57,9 +61,57 @@
                 <h1>SHOP</h1>
                 <p>We offer a variety of products dealing with PC, Laptops, Peripherals and the games catalogue.
                     <br> The specials section is for our producst which have been put up on sale for a reduced price.
-                    <br> You need to be logged in to view this page.
                 </p>
-                <a href="login.html" class = "ytlink">Click Here to Log In</a>
+            </div>
+        </section>
+
+        <section class="Options-Panel">
+            <h2>Products related to Computers</h2>
+            <div class = "row">
+                <div class = "column" onclick="location.href = 'PcAdmin.jsp'">
+                    <h3>PC</h3>
+                    <p>We offer a wide range of options related to the PC industry. These can be very useful for people who prefer desktop computers. 
+                        <br>This link directs you to our computer store.
+                    </p>
+                </div>
+                <div class = "column" onclick="location.href = 'LaptopAdmin.jsp'">
+                    <h3>Laptops</h3>
+                    <p>We offer a wide range of options related to the laptop industry. These can be very useful for people who prefer portable computers.
+                        <br> This link directs you to our laptop store.
+                    </p>
+                </div>
+                <div class = "column" onclick="location.href = 'PeripheralsAdmin.jsp'">
+                    <h3>Peripherals</h3>
+                    <p>We offer a wide variety of peripherals which can be used to enhance a users experience while using their computer.
+                        <br> This link directs you to our peripherals store.
+                    </p>
+                </div>
+            </div>
+            <h2>Products related to Games and Specials</h2>
+            <div class = "row">
+                <div class = "column2" onclick="location.href = 'GamesAdmin.jsp'">
+                    <h3>Games Catalogue</h3>
+                    <p>We cater to the needs of every gamer by selling the latest games available on the market
+                        <br> This link directs you to our gaming store.
+                    </p>
+                </div>
+                <div class = "column2" onclick="location.href = 'SpecialAdmin.jsp'">
+                    <h3>Special Offers</h3>
+                    <p>We offer periodic Sales on items that are low in stock.
+                        <br> This link directs you to our sales store.
+                    </p>
+                </div>
+            </div>
+            
+            <h2>Supplies</h2>
+            <div class = "row">
+                <div class = "column2" onclick="location.href = 'RestockAdmin.jsp'">
+                    <h3>Re-stock Supplies</h3>
+                    <p>Need to add Item to stock ?
+                        <br> This link directs you to the restock page.
+                    </p>
+                </div>
+              
             </div>
         </section>
 
@@ -74,21 +126,7 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
-            <br>
-            <center><div id="current_date"></p></center>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
-            <center><span id="datetime"></span></center>
-            <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
         </section>
-        
+
     </body>
 </html>

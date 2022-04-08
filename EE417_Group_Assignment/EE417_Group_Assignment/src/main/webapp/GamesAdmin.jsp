@@ -1,3 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+            <%@ page import = "java.io.*,java.util.*,java.sql.*"%>
+<%@ page import = "javax.servlet.http.*,javax.servlet.*" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix = "c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/sql" prefix = "sql"%>
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
 <html id="parents">
     <head id="parent"> <!--The header of the file--->
@@ -13,7 +19,7 @@
         <link rel = "stylesheet" href="Stylesheets/articles_styles.css">
         <link rel = "stylesheet" href="Stylesheets/dom_styles.css">
         <link rel = "stylesheet" href="Stylesheets/register_styles.css">
-        <link rel = "stylesheet" href="Stylesheets/pc_styles.css">
+        <link rel = "stylesheet" href="Stylesheets/games_styles.css">
         <!---Fonts obtained from google fonts---> 
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,11 +46,13 @@
             </a>
             <div class = "nav-links"> <!---Styles class for nav bar--->
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "shop.html">SHOP</a></li>
-                    <li><a href = "returns.html">RETURNS</a></li>
-                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                    <li><a href = "IndexAdmin.jsp">HOME</a></li>
+                    <li><a href = "AboutusAdmin.jsp">ABOUT US</a></li>
+                    <li><a href = "ShopAdmin.jsp">SHOP</a></li>
+                    <li><a href = "ReturnsAdmin.jsp">RETURNS</a></li>
+                    <li><a href = "RestockAdmin.jsp">RESTOCK</a></li>
+                    <li><a href = "Users.jsp">USERS</a></li>
+                    <li><a href = "LogoutServlet">LOG OUT</a></li> <!---List of html webpages used with their links--->
                 </ul>
             </div>
         </section>
@@ -53,13 +61,47 @@
         <!---This section was used to show the user what page they are on with an image and some comments on the page--->
         <!---This section has a button which takes the user to the home page of the Athletic which is a source used in the options. 
             It also has a hovering transition effect--->
-        <section class = 'header_pc'>
+        <section class = 'header_games'>
             <div class = "introduction">
-                <h1>PC Shop</h1>
-                <p>Welcome to the PC shop. Here we have all the new PC's available with the latest technologies
+                <h1>Games Catalogue</h1>
+                <p>Welcome to the Games Catalogue. Here you will find games which have been recently released along with older games.
                     <br> You need to be logged in to make a purchase
                 </p>
-                <a href="shop.html" class = "ytlink">Go back to the Shop</a>
+                <a href="ShopUser.jsp" class = "ytlink">Go back to the Shop</a>
+            </div>
+        </section>
+        
+        <section class = 'header'>
+            <div class = "introduction">
+                <h1>List of Games on Sale</h1>
+                <sql:setDataSource var = "snapshot" driver = "com.mysql.jdbc.Driver"
+         url = "jdbc:mysql://ee417.crxkzf89o3fh.eu-west-1.rds.amazonaws.com:3306/testdb"
+         user = "ee417"  password = "ee417"/>
+         
+        <!-- Query to obtain all the values from the accounts table -->
+      <sql:query dataSource = "${snapshot}" var = "result">
+      SELECT itemtype, itemname, price, itemsummary, dateadded FROM testdb.computerworld_shopitems where itemtype = 'Game';    </sql:query>
+      
+      <!-- Creating the table in the JSP file and setting the headers -->
+      <table border = "1" width = "100%">
+         <tr>
+            <th>TYPE</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>SUMMARY</th>
+            <th>DATE</th>
+         </tr>
+         <!-- Adding the values from the table into the row of the JSP file in a foreach loop-->
+        <c:forEach var = "row" items = "${result.rows}">
+            <tr>
+               <td><c:out value = "${row.itemtype}"/></td>
+               <td><c:out value = "${row.itemname}"/></td>
+               <td><c:out value = "${row.price}"/></td>
+               <td><c:out value = "${row.itemsummary}"/></td>
+               <td><c:out value = "${row.dateadded}"/></td>
+            </tr>
+         </c:forEach>
+      </table>
             </div>
         </section>
 
@@ -74,20 +116,6 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
-            <br>
-            <center><div id="current_date"></p></center>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
-            <center><span id="datetime"></span></center>
-            <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
         </section>
 
     </body>

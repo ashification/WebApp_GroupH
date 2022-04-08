@@ -4,10 +4,10 @@
         <meta name = "viewport" content="width=device-width, initial-scale=1.0">
         <!--Name of the webpage--->
         <title>
-            ARSH Sports 
+            Computer World
         </title>
         <!---This sets the page logo on the top as the websites logo--->
-        <link rel="icon" type="image/x-icon" href="images/logo2.JPG">
+        <link rel="icon" type="image/x-icon" href="images/cw.JPG">
         <!--Stylesheet for the index page and the login page--->
         <link rel = "stylesheet" href="Stylesheets/style.css">
         <link rel = "stylesheet" href="Stylesheets/login_styles.css"> 
@@ -53,9 +53,9 @@
             <div class = "introduction">
                 <h1>LOG IN</h1>
                 <div class="form">
-                    <form action="">
-                        <input type="text" name="username" id="userid" placeholder="Enter Your Name" required>
-                        <input type="text" name="password" id="passid" placeholder="Enter Your Password" required>
+                    <form method="POST" action="LoginServerlet">
+                        <input type="text" name="username" id="usernameid" placeholder="Enter Your Name" required>
+                        <input type="password" name="password" id="passwordid" placeholder="Enter Your Password" required>
                         <br/>
                         <button type="submit" class="ytlink">Log In</button>
                         <div><br/>
@@ -78,6 +78,7 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
+            <br>
             <center><div id="current_date"></p></center>
             <script>
             date = new Date();
@@ -90,8 +91,8 @@
             <script>
             var dt = new Date();
             document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script            
-         </section>
+            </script>
+        </section>
 
     </body>
 </html>

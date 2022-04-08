@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
 <html>
     <head> <!--The header of the file--->
@@ -35,11 +37,11 @@
             </a>
             <div class = "nav-links"> <!---Styles class for nav bar--->
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "shop.html">SHOP</a></li>
-                    <li><a href = "returns.html">RETURNS</a></li>
-                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                    <li><a href = "IndexUser.jsp">HOME</a></li>
+                    <li><a href = "AboutusUser.jsp">ABOUT US</a></li>
+                    <li><a href = "ShopUser.jsp">SHOP</a></li>
+                    <li><a href = "ReturnsUser.jsp">RETURNS</a></li>
+                    <li><a href = "LogoutServlet">LOG OUT</a></li> <!---List of html webpages used with their links--->
                 </ul>
             </div>
         </section>
@@ -49,14 +51,12 @@
         <!---This section has a button which takes the user to the youtube page. It also has a hovering transition effect--->
         <section class = 'header_aboutus'>
             <div class = "introduction">
-                <h1>ABOUT US</h1>
-                <p> Computer World is a website that was created by a team of 8 people studying in DCU. The task of designing this 
-                    website was split into muini tasks and assigned to each member.<br>
-                    <br> Front end aspects of the project were handled by Arshad Hussain Asmath and Jieying Zhang. <br>
-                    <br> Back end development of the project was completed by Matthieu Crampon, Daniel Fagan and Haoran Zhou. <br>
-                    <br> The release of this project was handled by Theo Mazars and Asif Gafoor Syed. <br>
-                    <br> The entire project was supervised by the team leader, Aisling Lee.
+                <h1>RETURN POLICY</h1>
+                <p>Under consumer law, if a product or service breaks, is not fit for purpose or does not do what the seller or advertisement said it would do, you can ask for a repair, replacement or refund.<br>
+                    <br>Repairs, replacements and refunds are known as remedies. The remedy you are entitled to can depend on the goods in question and other factors. <br>
+                    <br>For products bought in a shop, you do not have a legal right to a refund because you change your mind. If you bought the goods online, in most cases, you have 14 days to change your mind and get a full refund. 
                 </p>
+                <a href="IndexUser.jsp" class = "ytlink">Visit Our Home Page</a>
             </div>
         </section>
 
@@ -71,20 +71,6 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
-            <br>
-            <center><div id="current_date"></p></center>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
-            <center><span id="datetime"></span></center>
-            <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
         </section>
 
     </body>

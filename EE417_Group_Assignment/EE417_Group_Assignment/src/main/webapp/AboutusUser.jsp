@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html> <!--Indicates the document is a HTML-->
 <html>
     <head> <!--The header of the file--->
@@ -35,11 +37,11 @@
             </a>
             <div class = "nav-links"> <!---Styles class for nav bar--->
                 <ul>
-                    <li><a href = "index.html">HOME</a></li>
-                    <li><a href = "aboutus.html">ABOUT US</a></li>
-                    <li><a href = "shop.html">SHOP</a></li>
-                    <li><a href = "returns.html">RETURNS</a></li>
-                    <li><a href = "login.html">LOG IN/REGISTER</a></li> <!---List of html webpages used with their links--->
+                    <li><a href = "IndexUser.jsp">HOME</a></li>
+                    <li><a href = "AboutusUser.jsp">ABOUT US</a></li>
+                    <li><a href = "ShopUser.jsp">SHOP</a></li>
+                    <li><a href = "ReturnsUser.jsp">RETURNS</a></li>
+                    <li><a href = "LogoutServlet">LOG OUT</a></li> <!---List of html webpages used with their links--->
                 </ul>
             </div>
         </section>
@@ -71,20 +73,6 @@
                 <i class = "fab fa-twitter"></i>
                 <i class = "fab fa-youtube"></i>
             </div>
-            <br>
-            <center><div id="current_date"></p></center>
-            <script>
-            date = new Date();
-            year = date.getFullYear();
-            month = date.getMonth() + 1;
-            day = date.getDate();
-            document.getElementById("current_date").innerHTML = day + "/" + month + "/" + year;
-            </script>
-            <center><span id="datetime"></span></center>
-            <script>
-            var dt = new Date();
-            document.getElementById("datetime").innerHTML = dt.toLocaleTimeString();
-            </script>
         </section>
 
     </body>
